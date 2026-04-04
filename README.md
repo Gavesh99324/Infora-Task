@@ -1,9 +1,9 @@
-# Infora Internship Task: AI FAQ Assistant
+# AI FAQ Assistant
 
 A complete beginner-friendly FAQ chatbot with:
 
 - Python backend (chatbot engine + API)
-- React.js + MUI frontend (responsive polished UI)
+- React.js + MUI frontend 
 
 ## Features
 
