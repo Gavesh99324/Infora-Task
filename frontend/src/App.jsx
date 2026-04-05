@@ -23,6 +23,36 @@ const API_BASE = import.meta.env.VITE_API_BASE_URL || "";
 function App({ onToggleMode }) {
   const theme = useTheme();
   const isDark = theme.palette.mode === "dark";
+  const scrollbarStyles = {
+    scrollbarWidth: "thin",
+    scrollbarColor: isDark
+      ? "rgba(59, 130, 246, 0.55) rgba(15, 23, 42, 0.45)"
+      : "rgba(59, 130, 246, 0.55) rgba(148, 163, 184, 0.35)",
+    "&::-webkit-scrollbar": {
+      width: 10,
+      height: 10,
+    },
+    "&::-webkit-scrollbar-track": {
+      backgroundColor: isDark
+        ? "rgba(15, 23, 42, 0.45)"
+        : "rgba(148, 163, 184, 0.35)",
+      borderRadius: 999,
+    },
+    "&::-webkit-scrollbar-thumb": {
+      backgroundColor: isDark
+        ? "rgba(59, 130, 246, 0.55)"
+        : "rgba(37, 99, 235, 0.45)",
+      borderRadius: 999,
+      border: isDark
+        ? "2px solid rgba(15, 23, 42, 0.45)"
+        : "2px solid rgba(148, 163, 184, 0.35)",
+    },
+    "&::-webkit-scrollbar-thumb:hover": {
+      backgroundColor: isDark
+        ? "rgba(96, 165, 250, 0.8)"
+        : "rgba(37, 99, 235, 0.75)",
+    },
+  };
   const initialBotMessage =
     "Hello. Ask any question related to travel booking, flights, hotels, cancellations, or visas.";
 
@@ -105,10 +135,7 @@ function App({ onToggleMode }) {
         {
           role: "bot",
           text: data.message,
-          meta:
-            data.status === "matched"
-              ? `Matched: ${data.matched_question} | Confidence: ${data.confidence}`
-              : null,
+          meta: null,
         },
       ]);
     } catch (err) {
@@ -204,7 +231,12 @@ function App({ onToggleMode }) {
         </Typography>
         <Stack
           spacing={0.75}
-          sx={{ overflowY: "auto", minHeight: 0, pr: 0.25 }}
+          sx={{
+            overflowY: "auto",
+            minHeight: 0,
+            pr: 0.25,
+            ...scrollbarStyles,
+          }}
         >
           {suggestions.map((item) => (
             <Button
@@ -297,6 +329,7 @@ function App({ onToggleMode }) {
               borderRadius: 3,
               overflowY: "auto",
               backgroundColor: isDark ? "#0E182C" : "#FCFEFF",
+              ...scrollbarStyles,
             }}
           >
             <Stack spacing={1.5}>
@@ -312,8 +345,8 @@ function App({ onToggleMode }) {
                   <Box
                     sx={{
                       maxWidth: "82%",
-                      px: 2,
-                      py: 1.25,
+                      px: 1.5,
+                      py: 1,
                       borderRadius: 2.5,
                       color: message.role === "user" ? "white" : "text.primary",
                       bgcolor:
@@ -331,11 +364,22 @@ function App({ onToggleMode }) {
                             : "rgba(11,95,255,0.18)",
                     }}
                   >
-                    <Typography variant="body1">{message.text}</Typography>
+                    <Typography
+                      sx={{
+                        fontSize: { xs: "0.85rem", md: "0.9rem" },
+                        lineHeight: 1.4,
+                      }}
+                    >
+                      {message.text}
+                    </Typography>
                     {message.meta ? (
                       <Typography
-                        variant="caption"
-                        sx={{ mt: 0.8, display: "block", opacity: 0.9 }}
+                        sx={{
+                          mt: 0.6,
+                          display: "block",
+                          opacity: 0.85,
+                          fontSize: "0.78rem",
+                        }}
                       >
                         {message.meta}
                       </Typography>
