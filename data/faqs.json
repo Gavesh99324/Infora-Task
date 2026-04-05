@@ -1,44 +1,38 @@
 [
   {
     "id": "faq-001",
-    "question": "What is the internship selection process?",
-    "answer": "The process usually includes application review, a small practical task, and a final interview.",
-    "keywords": ["selection", "process", "interview", "application", "task"]
+    "question": "How can I book a flight ticket?",
+    "answer": "You can search flights by route and date, choose a fare, enter traveler details, and complete payment to confirm your booking.",
+    "keywords": ["book", "flight", "ticket", "fare", "payment"]
   },
   {
     "id": "faq-002",
-    "question": "How long does the internship task review take?",
-    "answer": "Task reviews generally take 3 to 7 working days depending on the number of applications.",
-    "keywords": ["review", "duration", "days", "timeline", "when"]
+    "question": "How do I book a hotel stay?",
+    "answer": "Select your destination and travel dates, compare room options, and pay securely to receive instant booking confirmation.",
+    "keywords": ["hotel", "room", "stay", "destination", "book"]
   },
   {
     "id": "faq-003",
-    "question": "What skills are expected from candidates?",
-    "answer": "We look for problem-solving, communication, consistency, and practical implementation skills.",
-    "keywords": [
-      "skills",
-      "expected",
-      "requirements",
-      "problem-solving",
-      "communication"
-    ]
+    "question": "Can I cancel my booking and get a refund?",
+    "answer": "Yes, most bookings can be canceled based on fare rules. Refund amount and timeline depend on the provider policy.",
+    "keywords": ["cancel", "cancellation", "refund", "policy", "rules"]
   },
   {
     "id": "faq-004",
-    "question": "Can beginners apply for this internship?",
-    "answer": "Yes. This internship task is beginner-friendly, and your learning attitude matters.",
-    "keywords": ["beginners", "apply", "eligibility", "experience", "student"]
+    "question": "How can I reschedule my flight or hotel booking?",
+    "answer": "Go to Manage Booking, choose the reservation, and select new dates. Fare differences or change fees may apply.",
+    "keywords": ["reschedule", "change", "modify", "dates", "manage"]
   },
   {
     "id": "faq-005",
-    "question": "How should I submit my internship task?",
-    "answer": "Submit your project as instructed by the recruiter, typically through email or a shared repository link.",
-    "keywords": ["submit", "submission", "email", "repository", "link"]
+    "question": "What are the baggage rules for flights?",
+    "answer": "Baggage allowance depends on airline and fare type. Check cabin and check-in limits in your itinerary before travel.",
+    "keywords": ["baggage", "luggage", "allowance", "cabin", "check-in"]
   },
   {
     "id": "faq-006",
-    "question": "Do I need advanced AI knowledge for this task?",
-    "answer": "No. A simple, clear chatbot implementation with good structure is enough.",
-    "keywords": ["advanced", "ai", "knowledge", "simple", "beginner"]
+    "question": "When should I complete check-in and what visa documents are needed?",
+    "answer": "Online check-in usually opens 24 to 48 hours before departure. Visa requirements vary by destination, so verify with official embassy sources.",
+    "keywords": ["check-in", "visa", "documents", "departure", "travel"]
   }
 ]

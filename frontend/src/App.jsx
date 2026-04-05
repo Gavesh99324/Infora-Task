@@ -28,7 +28,7 @@ function App({ onToggleMode }) {
   const [messages, setMessages] = useState([
     {
       role: "bot",
-      text: "Hello. Ask any question related to this FAQ knowledge base.",
+      text: "Hello. Ask any question related to travel booking, flights, hotels, cancellations, or visas.",
       meta: null,
     },
   ]);
@@ -278,7 +278,7 @@ function App({ onToggleMode }) {
                 setMessages([
                   {
                     role: "bot",
-                    text: "Hello. Ask any question related to this FAQ knowledge base.",
+                    text: "Hello. Ask any question related to travel booking, flights, hotels, cancellations, or visas.",
                     meta: null,
                   },
                 ])

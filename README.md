@@ -3,7 +3,9 @@
 A complete beginner-friendly FAQ chatbot with:
 
 - Python backend (chatbot engine + API)
-- React.js + MUI frontend 
+- React.js + MUI frontend
+
+Domain focus: Travel Booking Assistant FAQs.
 
 ## Features
 
@@ -15,6 +17,7 @@ A complete beginner-friendly FAQ chatbot with:
 - Suggested FAQ chips in UI
 - CLI mode still available
 - Unit tests for chatbot behavior
+- Travel-focused topics like flights, hotels, cancellation, rescheduling, baggage, check-in, visas, and payment support
 
 ## Tech Stack
 
@@ -104,7 +107,7 @@ Example request:
 
 ```json
 {
-  "message": "What is the selection process?"
+  "message": "How can I cancel my booking and get a refund?"
 }
 ```
 

@@ -10,10 +10,10 @@ class AssistantConfig:
     confidence_threshold: float = 0.35
     fallback_response: str = (
         "I could not find an exact answer for that yet. "
-        "Please rephrase your question or contact support@infora-demo.com."
+        "Please rephrase your question or contact travel-support@infora-demo.com."
     )
     greeting_response: str = (
         "Hello! I am your FAQ Assistant. "
-        "Ask me about internship process, timelines, or requirements."
+        "Ask me about flight and hotel booking, cancellations, baggage, check-in, visas, or payments."
     )
     exit_phrases: tuple[str, ...] = ("exit", "quit", "bye")

@@ -6,9 +6,9 @@ from faq_assistant.chatbot import FAQAssistant
 def test_matcher_returns_expected_answer_for_known_question() -> None:
     assistant = FAQAssistant(Path("data/faqs.json"))
 
-    response = assistant.get_response("What is your selection process?")
+    response = assistant.get_response("How do I cancel and get a refund?")
 
-    assert "application review" in response.lower()
+    assert "refund" in response.lower()
     assert "confidence=" in response
 
 
