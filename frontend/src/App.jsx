@@ -147,27 +147,47 @@ function App({ onToggleMode }) {
           sx={{
             display: "flex",
             alignItems: "center",
-            gap: 1,
+            justifyContent: "space-between",
             px: 1,
             py: 0.75,
           }}
         >
-          <Box
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            <Box
+              sx={{
+                width: 28,
+                height: 28,
+                borderRadius: "50%",
+                display: "grid",
+                placeItems: "center",
+                color: "white",
+                background: "linear-gradient(135deg, #0B5FFF, #0EA5A3)",
+              }}
+            >
+              <SmartToyRoundedIcon sx={{ fontSize: 16 }} />
+            </Box>
+            <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
+              Travel FAQ
+            </Typography>
+          </Box>
+          <IconButton
+            onClick={onToggleMode}
+            color="secondary"
+            aria-label="Toggle theme"
+            size="small"
             sx={{
-              width: 28,
-              height: 28,
-              borderRadius: "50%",
-              display: "grid",
-              placeItems: "center",
-              color: "white",
-              background: "linear-gradient(135deg, #0B5FFF, #0EA5A3)",
+              border: "1px solid",
+              borderColor: "secondary.main",
+              p: 0.45,
+              bgcolor: isDark ? "rgba(14,165,163,0.15)" : "transparent",
             }}
           >
-            <SmartToyRoundedIcon sx={{ fontSize: 16 }} />
-          </Box>
-          <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
-            Travel FAQ
-          </Typography>
+            {isDark ? (
+              <LightModeRoundedIcon sx={{ fontSize: 16 }} />
+            ) : (
+              <DarkModeRoundedIcon sx={{ fontSize: 16 }} />
+            )}
+          </IconButton>
         </Box>
         <Button
           variant="contained"
@@ -175,14 +195,6 @@ function App({ onToggleMode }) {
           sx={{ justifyContent: "flex-start" }}
         >
           Reset Conversation
-        </Button>
-        <Button
-          variant="outlined"
-          color="secondary"
-          onClick={onToggleMode}
-          sx={{ justifyContent: "flex-start" }}
-        >
-          {isDark ? "Light Mode" : "Dark Mode"}
         </Button>
         <Divider />
         <Typography
